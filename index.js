@@ -9,6 +9,16 @@ const data_parser = body_parser.urlencoded({
 const {google} = require('googleapis')
 const keys = require('./keys.json')
 
+app.listen(3000)
+app.use(express.static(__dirname + '/public')) //redirect to manual css
+app.use('/js', express.static(__dirname + '/node_modules/bootstrap/dist/js')) // redirect bootstrap JS
+app.use('/js', express.static(__dirname + '/node_modules/jquery/dist')) // redirect JS jQuery
+app.use('/css', express.static(__dirname + '/node_modules/bootstrap/dist/css')) // redirect CSS bootstrap
+
+app.get('/', (request, response) => {
+    response.sendFile(__dirname + '/index.html')
+})
+
 const writer = new google.auth.JWT(
     keys.client_email,
     null,
@@ -21,16 +31,6 @@ let person = {
     instagram: '',
     phone: ''
 }
-
-app.listen(3000)
-app.use(express.static(__dirname + '/public')) //redirect to manual css
-app.use('/js', express.static(__dirname + '/node_modules/bootstrap/dist/js')) // redirect bootstrap JS
-app.use('/js', express.static(__dirname + '/node_modules/jquery/dist')) // redirect JS jQuery
-app.use('/css', express.static(__dirname + '/node_modules/bootstrap/dist/css')) // redirect CSS bootstrap
-
-app.get('/', (request, response) => {
-    response.sendFile(__dirname + '/index.html')
-})
 
 app.post('/commit', data_parser, (request, response) => {
     if(!request.body) {
