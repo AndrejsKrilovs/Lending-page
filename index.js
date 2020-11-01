@@ -23,7 +23,11 @@ let person = {
 }
 
 app.listen(3000)
-app.use(express.static(__dirname + '/public'))
+app.use(express.static(__dirname + '/public')) //redirect to manual css
+app.use('/js', express.static(__dirname + '/node_modules/bootstrap/dist/js')) // redirect bootstrap JS
+app.use('/js', express.static(__dirname + '/node_modules/jquery/dist')) // redirect JS jQuery
+app.use('/css', express.static(__dirname + '/node_modules/bootstrap/dist/css')) // redirect CSS bootstrap
+
 app.get('/', (request, response) => {
     response.sendFile(__dirname + '/index.html')
 })
