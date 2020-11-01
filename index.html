@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <style>
+body {
+    min-height: 100vh;
+    font-family: "MyriadProRegular", sans-serif;
+    font-size: 16px;
+    line-height: 1.3;
+    color: #fff;
+    background: url('./bg.png') no-repeat center;
+    background-size: cover;
+    padding: 80px 10px;
+}
+
+.text {
+    text-align: center;
+}
+
+.h_title {
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 48px;
+
+}
+
+.main {
+    width: 100%;
+    max-width: 1018px;
+    margin: 47px auto 0;
+}
+
+.iframe-box {
+    position: relative;
+    width: 100%;
+    max-width: 818px;
+    padding: 18px;
+    background-color: #fff;
+    border-radius: 10px;
+    -webkit-box-shadow: 0 0 35px rgba(27, 129, 210, 0.38);
+    box-shadow: 0 0 35px rgba(27, 129, 210, 0.38);
+    margin: 0 auto 29px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.iframe-wrap {
+    overflow: hidden;
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+}
+
+.main_link {
+    display: block;
+    width: 300px;
+    background-color: #0d112e;
+    border-radius: 10px;
+    padding: 18px 5px;
+    margin: 30px auto 0;
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;
+    color: #23c1a5;
+    transition: box-shadow 0.3s;
+    transition: box-shadow 0.3s, -webkit-box-shadow 0.3s;
+}
+
+.popup {
+    width: 95%;
+    max-width: 460px;
+    background-color: #1b81d2;
+    border-radius: 10px;
+    -webkit-box-shadow: 0 0 35px rgba(27, 129, 210, 0.38);
+    box-shadow: 0 0 35px rgba(27, 129, 210, 0.38);
+    padding: 60px 51px;
+    overflow-y: auto;
+}
+
+.popup_title {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 30px;
+    text-align: center;
+    color: #fff;
+}
+
+.form {
+    margin-top: 40px;
+}
+
+.form_label:not(:last-of-type) {
+    margin-bottom: 14px;
+}
+.form_label {
+    display: block;
+}
+
+.form_input {
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 0 20px;
+    min-height: 58px;
+    border: none;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+}
+
+::placeholder {
+    font-size: 15px;
+}
+</style>
+</head>
+<body>
+<header class="text">
+    <h1 class="h_title">Андрей Крылов<br> представляет</h1>
+</header>
+
+<main class="main">
+    <div class="iframe-box">
+        <div class="iframe-wrap">
+            <!--            <iframe width="818" height="460" src="https://youtube.com" frameborder="0"-->
+            <!--                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"-->
+            <!--                    allowfullscreen=""></iframe>-->
+        </div>
+    </div>
+    <button type="button" class="btn btn-primary main_link" data-toggle="modal" data-target="#popup">
+        Я с вами!
+    </button>
+</main>
+
+
+<!-- Modal -->
+<div class="modal fade" id="popup" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content popup">
+            <div class="modal-body">
+                <h1 class="popup_title">
+                    Укажите, куда Вам выслать информационные пакет
+                    и как можно с Вами связаться чтобы ответить на Ваши дополнительные вопросы
+                </h1>
+                <form accept-charset="utf-8" method="post" class="form">
+                    <label class="form_label">
+                        <input placeholder="Введите Ваше Имя" type="text" name="name" class="form_input"
+                               pattern="[A-Z]{1}[a-z]{1,}" required="">
+                    </label>
+
+                    <label class="form_label">
+                        <input placeholder="Введите email" type="email" name="email" class="form_input" required="">
+                    </label>
+
+                    <label class="form_label">
+                        <input placeholder="Ваш Instagram (@nick_name)" type="text" name="instagram"
+                               pattern="@{1}[a-z]{1,}" class="form_input">
+                    </label>
+                    
+                  <!--  /* -->
+                  <!--      При условии, что все заполнено верно: Экспорт данных в Excel + переход в чат бот -->
+                  <!--      "https://aks.customer.smartsender.eu/lp/Z909qPE0" -->
+                  <!--  */ -->
+                    <button id="ok" type="submit" class="btn btn-primary main_link">
+                        Я с вами!
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- <script type="text/javascript"> -->
+<!--    document.getElementById("ok").onclick = function () { -->
+<!--        location.href = "https://aks.customer.smartsender.eu/lp/Z909qPE0"; -->
+<!--    }; -->
+<!-- </script> -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
