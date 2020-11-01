@@ -1,0 +1,43 @@
+.popup {
+    width: 95%;
+    max-width: 460px;
+    background-color: #1b81d2;
+    border-radius: 10px;
+    -webkit-box-shadow: 0 0 35px rgba(27, 129, 210, 0.38);
+    box-shadow: 0 0 35px rgba(27, 129, 210, 0.38);
+    padding: 60px 51px;
+    overflow-y: auto;
+}
+
+.popup_title {
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 30px;
+    text-align: center;
+    color: #fff;
+}
+
+.form {
+    margin-top: 40px;
+}
+
+.form_label:not(:last-of-type) {
+    margin-bottom: 14px;
+}
+.form_label {
+    display: block;
+}
+
+.form_input {
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 0 20px;
+    min-height: 58px;
+    border: none;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+}
+
+::placeholder {
+    font-size: 15px;
+}
